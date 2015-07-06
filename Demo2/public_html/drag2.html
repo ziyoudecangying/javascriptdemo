@@ -1,0 +1,32 @@
+<head>
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/jquery-ui.js"></script>
+    <script src="js/libs/jquery.jsPlumb-1.4.1-all-min.js"></script>
+    <script type="text/javascript">
+        jsPlumb.bind("ready", function () {
+            var e0 = jsPlumb.addEndpoint("container0");
+            var e1 = jsPlumb.addEndpoint("container1");
+
+            jsPlumb.connect({source: e0, target: e1});
+            
+        });
+    </script>
+
+    <style type="text/css">
+        #container0, #container1 {
+            float: left;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="container0">
+    </div>
+    <div id="container1">
+    </div>
+</body>
